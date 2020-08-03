@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
         tags = {"@Kiran"},
         plugin = {"pretty", "html:target/cucumber-report/single",
                 "json:target/cucumber-report/single/cucumber.json",
+                "junit:target/cucumber-reports/Test-Automation.xml",
                 "rerun:target/cucumber-report/single/rerun.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
