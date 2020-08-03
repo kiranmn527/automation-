@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Debug TestNG" verbose="1" configfailurepolicy="continue" parallel="methods">
+    <listeners>
+        <listener class-name="com.cucumber.testng.runner.testng_listeners.ReportListener"/>
+        <listener class-name="com.cucumber.testng.runner.testng_listeners.TestNgListener"></listener>
+    </listeners>
+    <test name="Debug Tests" parallel="methods" thread-count="1">
+        <classes>
+            <class name="com.cucumber.testng.runner.DebugRunner"/>
+        </classes>
+    </test>
+</suite>

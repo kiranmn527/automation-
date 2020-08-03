@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="1" configfailurepolicy="continue" parallel="methods">
+    <listeners>
+        <listener class-name="com.cucumber.testng.runner.testng_listeners.ReportListener"/>
+        <listener class-name="com.cucumber.testng.runner.testng_listeners.TestNgListener"></listener>
+    </listeners>
+    <test name="TestRunThread" parallel="methods" thread-count="1">
+        <!-- Specify the Run Suite classes which needed to be run in sequential order -->
+        <classes>
+            <class name="com.cucumber.testng.runner.TestRunner"/>
+        </classes>
+    </test>
+    <!--    <test name="SequentialThread" parallel="methods" thread-count="1">-->
+<!--        &lt;!&ndash; Specify the Run Suite classes which needed to be run in sequential order &ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="com.cucumber.testng.runner.SequentialRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="ParallelThread" parallel="methods" thread-count="4">-->
+<!--        &lt;!&ndash; Specify the Run Suite classes which needed to be run in parallel &ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="com.cucumber.testng.runner.ParallelRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Rerun Failed Tests" parallel="methods" thread-count="1">-->
+<!--        &lt;!&ndash; Specify the Run Suite classes which needed to be run in parallel &ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="com.cucumber.testng.runner.ReRunFailedTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Rerun Failed Tests" parallel="methods" thread-count="1">-->
+<!--        &lt;!&ndash; Specify the Run Suite classes which needed to be run in parallel &ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="com.cucumber.testng.runner.DebugRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
