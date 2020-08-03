@@ -8,8 +8,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import static com.cucumber.testng.page_objects.web.WebBasePage.getDriver;
-import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.getScenarios;
-import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.log;
+import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.*;
 
 public class ReportListener implements ITestListener {
     @Override
@@ -57,5 +56,8 @@ public class ReportListener implements ITestListener {
     private void embedScreenshot() {
         String base64Img = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
         log("<img src=\"data:image/png;base64," + base64Img + "\" ></img>");
+        byte[] screenshot = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES);
+        logShot(screenshot);
+
     }
 }

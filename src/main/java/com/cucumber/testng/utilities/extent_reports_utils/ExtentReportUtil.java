@@ -21,4 +21,8 @@ public class ExtentReportUtil {
     public static void log(String str) {
         getScenarios().write(str);
     }
+
+    public static void logShot(byte[] shot){
+        getScenarios().embed(shot, "image/png");
+    }
 }
